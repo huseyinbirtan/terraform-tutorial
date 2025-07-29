@@ -55,7 +55,14 @@ resource "azurerm_linux_web_app" "as-linux" {
       name                      = "AllowSubnet"
       virtual_network_subnet_id = var.subnet_agw_id
       action                    = "Allow"
+      priority                  = 100
+    }
+
+    ip_restriction {
+      name                      = "DenyAll"
+      action                    = "Deny"
       priority                  = 200
+      ip_address                = "0.0.0.0/0"
     }
   }
 
