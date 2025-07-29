@@ -107,7 +107,7 @@ locals {
   app_service_records_map = {
     for idx, app in azurerm_linux_web_app.as-linux :
     "record-${idx}" => {
-      name         = app.default_hostname
+      name         = app.name
       ip           = local.azurerm_private_endpoints["pe-${app.name}"].ip
     }
   }
@@ -116,8 +116,8 @@ locals {
 resource "azurerm_private_dns_a_record" "pdns-record" {
   for_each            = local.app_service_records_map
   name                = each.value.name
-  zone_name           = "private.dns"
+  zone_name           = "privatelink.azurewebsites.net"
   resource_group_name = local.resource_group_name
-  ttl                 = 300
+  ttl                 = 10
   records             = [each.value.ip]
 }

@@ -36,7 +36,7 @@ resource "azurerm_subnet" "sbs" {
 }
 
 resource "azurerm_private_dns_zone" "pdz" {
-  name                = "private.dns"
+  name                = "privatelink.azurewebsites.net"
   resource_group_name = local.resource_group_name
 }
 
