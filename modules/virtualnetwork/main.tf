@@ -41,7 +41,7 @@ resource "azurerm_private_dns_zone" "pdz" {
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "pdz-vnl" {
-  name                  = "pdz-vn-link-t"
+  name                  = "pdz-vnet-link-t"
   resource_group_name   = local.resource_group_name
   private_dns_zone_name = azurerm_private_dns_zone.pdz.name
   virtual_network_id    = azurerm_virtual_network.vn.id
