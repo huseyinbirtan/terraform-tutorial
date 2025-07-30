@@ -1,4 +1,4 @@
-# ✅ Solution
+# ✅ # Azure Terraform Assignment - Solution
 
 This solution is implemented for the AI generated challange for self development purposes. The Assignment can be found in Assignment.md file.
 

@@ -1,4 +1,4 @@
-# Azure Architect Assignment – Deploying a Scalable Web Application on Azure
+# Azure Terraform Assignment
 ## Objective
 Design and implement the infrastructure required to deploy a secure, scalable web application on Azure using Infrastructure as Code (IaC). The deployment should follow cloud architecture best practices in terms of scalability, availability, security, and cost-effectiveness.
 
